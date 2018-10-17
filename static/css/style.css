@@ -1,0 +1,65 @@
+
+ .part1 {
+ background-image:url('../../assets/backgrounds/hero.jpg');
+ height: 660px;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+ }
+ p {
+   color: white;
+ }
+h1 {
+ color: white;
+}
+.image {
+ background-image: url('../../assets/products/tshirt.png');
+}
+.icon{
+	float: right;
+	margin-top: 180px;
+	margin-right: 680px;
+}
+.section4 {
+ background-image:url('../../assets/backgrounds/about.jpg');
+   background-repeat: no-repeat;
+ background-size: cover;
+ height: 300px;
+ width: 100%;
+ padding: 70px;
+}
+.about{
+ border-style: solid;
+   border-width: 1px;
+}
+.section6{
+ text-align: center;
+}
+.font-family-fonts{
+   font-family: 'Open Sans', sans-serif;
+}
+.section3{
+ background-color: rgba(195,131,76);
+}
+nav{
+ box-shadow: none !important;
+}
+#section{
+ padding-top: 100px !important;
+}
+.nav-font{
+ font-family: 'Karla', sans-serif;
+}
+.card-panel{
+ margin-top: 0px !important;
+}
+.section{
+ padding-top: 0px !important;
+}
+.padding{
+ padding:20px;
+}
+.size{
+ font-family: 'Karla', sans-serif;
+font-family: 'Cinzel Decorative', cursive;
+}
