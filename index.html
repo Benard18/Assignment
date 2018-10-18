@@ -10,6 +10,7 @@
  <!-- Compiled and minified CSS -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+   <script src="static/js/script.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 
 </head>
@@ -38,20 +39,20 @@
  <!-- this is the beginning of section 2 -->
   <div class="section" id="section2" style="transition-delay: 2s;">
     <div class="section 2">
-    <div class="card-panel" style="background-color:rgb(222,184,135,0.5);">
+    <div class="card-panel" style="background-color:#C6C0A2;">
  <div class="row">
     <form action="#">
    <p>
    <div class="col s6">
-     <input type="checkbox" class='padding'id="test5" />
-     <label for="test5"><span class="black-text text-darken-2 padding size" style="padding-left: 0px;">Men</span></label>
-        <input class='padding' type="checkbox" id="test6" />
-     <label for="test6"><span class="black-text text-darken-2 padding size" style="padding-left: 0px;">Women</span></label>
-        <input class='padding' type="checkbox" id="test7" />
-     <label for="test7"><span class="black-text text-darken-2 padding size" style="padding-left: 0px;">Children</span></label>
+     <input type="checkbox" class='padding' id="myCheck" onclick="myFunction()" />
+     <label for="myCheck"><span class="black-text text-darken-2 padding size" style="padding-left: 0px;"><strong>MEN</strong></span></label>
+        <input class='padding' type="checkbox" id="test6" onclick="myFunctionLadies()" />
+     <label for="test6"><span class="black-text text-darken-2 padding size" style="padding-left: 0px;"><strong>WOMEN</strong></span></label>
+        <input class='padding' type="checkbox" id="test7" onclick="myFunctionChildren()" checked="true" />
+     <label for="test7"><span class="black-text text-darken-2 padding size" style="padding-left: 0px;"><strong>CHILDREN</strong></span></label>
      </div>
      <div class="col s6 " align="right">
-    <a  class="waves-effect waves-light btn"; "left"; style="background-color: rgba(139,69,19,1);" >See all products</a></div>
+    <a  class="waves-effect waves-light btn"; "left"; style="background-color: rgba(139,69,19,1);" >Click on the boxes to see all products</a></div>
     </p>
      </form>
         </div>
@@ -59,22 +60,22 @@
  </div>
 </div>
         <!-- this is the beginning of section 3 -->
-<!--         <div class="section">
+        <div class="section">
 
-            <div class="men">
+            <div class="men" id="text" style="display: none">
 
              <div class="row" align="center" style="margin-left: 200px;">
-               <a style="color:black;float: left;">MEN____________________________________________________________________________________________________________________________</a>
+               <a class="men2"style="color:black;float: left;"><span style="margin-right: 20px;background-color: white">MEN</span></a><br><br>
              <div class="col s3 m3">
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" width="150" height="300"src="assets/products/tshirt.png">
+                <img class="activator" width="80" height="200"src="assets/products/tshirt.png">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4"><i>Shirts</i></span>
+                <span class="card-title activator grey-text text-darken-4 size"><i>Shirts $200</i></span>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><i><strong>Shirts on Sale</strong></i>
+                <span class="card-title grey-text text-darken-4 size"><i><strong>Shirts on Sale</strong></i>
                  <br><i>Sale:$200 per shirt</i></span>
 
               </div>
@@ -88,14 +89,14 @@
                   <div class="col s3 m3">
                     <div class="card">
                       <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" data-caption="A picture of a way with a group of trees in a park"width="150" height="300"
+                        <img class="activator" data-caption="A picture of a way with a group of trees in a park"width="80" height="200"
                         src="assets/products/pants.png">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><i>Trousers</i></span>
+                        <span class="card-title activator grey-text text-darken-4 size"><i>Trousers $400</i></span>
                       </div>
                       <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4"><i><strong>Trousers on sale</strong></i>
+                        <span class="card-title grey-text text-darken-4 size"><i><strong>Trousers on sale</strong></i>
                          <br>
                          <i>Sale:$400 per shirt</i></span>
 
@@ -112,14 +113,14 @@
            <div class="col s3 m3">
                <div class="card">
                    <div class="card-image waves-effect waves-block waves-light">
-                     <img  class="activator" width="150" height="300" src="assets/products/backpack.png">
+                     <img  class="activator" width="80" height="200" src="assets/products/backpack.png">
                    </div>
                    <div class="card-content">
-                     <span class="card-title activator grey-text text-darken-4">Card Titlemore_vert</i></span>
+                     <span class="card-title activator grey-text text-darken-4 size"><i>Bags $300</i></span>
 
                    </div>
                    <div class="card-reveal">
-                     <span class="card-title grey-text text-darken-4">Card Titleclose</i></span>
+                     <span class="card-title grey-text text-darken-4"><i>Bags</i></span>
                      <p>Here is some more information about this product that is only revealed once clicked on.</p>
                    </div>
                  </div>
@@ -135,8 +136,9 @@
 
 </div>
 
-<div class="ladies"  style="margin-left: 200px;" >
-       <a style="color:black;">______________________________________________________________________________________________________________________WOMEN</a>
+<div class="ladies"   id="text2" style="display: none;margin-left: 200px;" >
+       <a class="men2"style="color:black;float: left;"><span style="margin-right: 20px;background-color: white">WOMEN</span></a>
+       <br><br><br>
  <div class="row" align="center">
 
        <div class=" col m3 s3">
@@ -145,7 +147,7 @@
            <img class="activator" src="assets/products/giacket.png" width="150" height="300">
          </div>
          <div class="card-content">
-           <span class="card-title activator grey-text text-darken-4">Card Titlemore_vert</i></span>
+           <span class="card-title activator grey-text text-darken-4"><i>Jacket $200</i></span>
 
          </div>
          <div class="card-reveal">
@@ -163,7 +165,7 @@
            <img class="activator" src="assets/products/tshirt.png" width="150" height="300">
          </div>
          <div class="card-content">
-           <span class="card-title activator grey-text text-darken-4">Card Titlemore_vert</i></span>
+           <span class="card-title activator grey-text text-darken-4 size"><i>Shirt $100</i></span>
 
          </div>
          <div class="card-reveal">
@@ -181,7 +183,7 @@
            <img class="activator" src="assets/products/trekkingshoes.png" width="150" height="300">
          </div>
          <div class="card-content">
-           <span class="card-title activator grey-text text-darken-4">Card Titlemore_vert</i></span>
+           <span class="card-title activator grey-text text-darken-4 size"><i>Shoes $ 400</i></span>
 
          </div>
          <div class="card-reveal">
@@ -197,11 +199,23 @@
        </div>
      </div>
        </div>
+       <div class="ladies"   id="text3" style="margin-left: 200px;" >
+        <a class="men2"style="color:black;float: left;"><span style="margin-right: 20px;background-color: white">CHILDREN</span></a>
+        <br><br><br>
+ <div class="row" align="center">
+                Nothing to Display
+
+</div>
+
+
+       </div>
      </div>
- -->     <!-- this is the beginning of section 4 -->
+       </div>
+     </div>
+     <!-- this is the beginning of section 4 -->
 
 <div class="section4">
- <div class="about"><p align="center" >ABOUT US </p> <p align="center">This is where high-fashioned clothing is designed and crafted <br>from the heart by an amazing team of craftsmen and designers <br>who understand what fashion is.</p></div>
+ <div class="about"><p align="center" ><strong>ABOUT US</strong> </p> <p align="center">This is where high-fashioned clothing is designed and crafted <br>from the heart by an amazing team of craftsmen and designers <br>who understand what fashion is.</p></div>
 </div>
 
 
@@ -210,9 +224,9 @@
 <!-- this is the beginning of section 5 -->
 
 <div class="section5" style="margin: 0px !important;">
-<div style="background-color: grey">
+<div style="background-color: rgba(48,48,48,0.7);height:50px; ">
 <div class="divider"></div>
-  <p  class="font-family-fonts" style="padding-left: 30px;margin: 0px !important;"><img src="assets/social_icons/twitter.png" width="20" height="20">"SALE:Buy anything for 45% off. Use the promo CODE YOLOMY45 when you buy items."</p>
+  <p  class="font-family-fonts" style="padding-left: 30px;line-height: 10px !important;" align="center"><img src="assets/social_icons/twitter.png" width="20" height="20">"SALE:Buy anything for 45% off. Use the promo CODE YOLOMY45 when you buy items."</p>
  </div>
 
  </div>
@@ -222,29 +236,32 @@
 
  <!-- this is the beginning of section 6 -->
 <footer>
- <div class="section6"style="background-color: black">
+ <div class="section6"style="background-color: rgb(48,48,48);line-height: 50px;">
  <div>
  <div class="divider"></div>
  <div class="row" style="margin-bottom: 0px !important">
 
- <div class="col s4"><span class="white-text"  class="font-family-fonts" style="margin-top: 40px !important;" >YOLOMY <br> <br>WE ARE YOLOMY-WE UNDERSTAND FASHION AND STYLE.WE CRAFT OUR PRODUCTS WITH LOVE AND DILIGENCE.</span>
+ <div class="col s4"><span class="white-text"  class="font-family-fonts" style="margin-top: 40px !important;" >YOLOMY<br>WE ARE YOLOMY-WE UNDERSTAND FASHION AND STYLE.WE CRAFT OUR PRODUCTS WITH LOVE AND DILIGENCE.</span>
 </div>
 
- <div class="col s4"> <span class="white-text"  class="font-family-fonts">We are social <br>
-   <br><br><br></span>
+ <div class="col s4"> <span class="white-text"  class="font-family-fonts" style="font-size: 30px;"><strong>We are social</strong> <br>
+   <br></span>
  <img src="assets/social_icons/g_plus.png">
  <img src="assets/social_icons/facebook.png">
  <img src="assets/social_icons/you_tube.png">
  <img src="assets/social_icons/stumble_upon.png">
+ <br>
  <img src="assets/social_icons/skype.png">
  <img src="assets/social_icons/flickr.png">
  <img src="assets/social_icons/twitter_bird.png">
  <img src="assets/social_icons/pinterest.png">
+ <br><br><br>
+ <p>CopyRight 2017 YOLOMY INC</p>
 </div>
 
 <div class="col s4">
 <span class="white-text "  class="font-family-fonts">
- CREDITS|PRIVACY|ABOUT|CONTACT<br> <br>
+ CREDITS | PRIVACY | ABOUT | CONTACT
    <br>Yolomy:We Mean Fashion
    </span>
  </div>
